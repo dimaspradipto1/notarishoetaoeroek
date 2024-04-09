@@ -275,9 +275,9 @@
                       <td><a href="{{ route('export_pbb') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
                     <tr>
-                      <td><a href="#" class="text-primary fw-bold">pengurasanm izin usaha</a></td>
+                      <td><a href="#" class="text-primary fw-bold">pengurasan izin usaha</a></td>
                       <td>{{ $izinUsahaStatusPending }}</td>
-                      <td><a href="#" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
+                      <td><a href="{{ route('export_izin_usaha') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">jual beli tanah dan bangunan</a></td>

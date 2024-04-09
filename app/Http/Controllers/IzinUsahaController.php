@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\IzinUsaha;
 use Illuminate\Http\Request;
+use App\Exports\IzinUsahaExport;
+use Maatwebsite\Excel\Facades\Excel;
 use App\DataTables\IzinUsahaDataTable;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -78,5 +80,10 @@ class IzinUsahaController extends Controller
 
         Alert::success('Berhasil', 'Data Berhasil dihapus!')->autoclose(3000)->toToast();
         return redirect()->route('izin_usaha.index');
+    }
+
+    public function export_izin_usaha()
+    {
+        return Excel::download(new IzinUsahaExport, 'Laporan Izin Usaha Pending.xlsx');
     }
 }
