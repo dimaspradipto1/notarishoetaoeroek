@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Sertifikat;
 use Illuminate\Http\Request;
+use App\Exports\SertifikatExport;
+use Maatwebsite\Excel\Facades\Excel;
 use App\DataTables\SertifikatDataTable;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -78,5 +80,10 @@ class SertifikatController extends Controller
 
         Alert::success('Berhasil', 'Data Berhasil dihapus!')->autoclose(3000)->toToast();
         return redirect()->route('sertifikat.index');
+    }
+
+    public function export_sertifikat()
+    {
+        return Excel::download(new SertifikatExport, 'Laporan Sertifikat Pending.xlsx');
     }
 }
