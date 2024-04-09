@@ -282,7 +282,7 @@
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">jual beli tanah dan bangunan</a></td>
                       <td>{{ $tanahStatusPending }}</td>
-                      <td><a href="#" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
+                      <td><a href="{{ route('export_tanah') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
                   </tbody>
                 </table>

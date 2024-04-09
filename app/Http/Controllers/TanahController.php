@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tanah;
+use App\Exports\TanahExport;
 use Illuminate\Http\Request;
 use App\DataTables\TanahDataTable;
+use Maatwebsite\Excel\Facades\Excel;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class TanahController extends Controller
@@ -75,5 +77,10 @@ class TanahController extends Controller
 
         Alert::success('Success', 'Data berhasil dihapus')->autoclose(3000)->toToast();
         return redirect()->route('tanah.index');
+    }
+
+    public function export_tanah()
+    {
+        return Excel::download(new TanahExport, 'Laporan Tanah Pending.xlsx');
     }
 }
