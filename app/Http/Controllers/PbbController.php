@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pbb;
+use App\Exports\PBBExport;
 use Illuminate\Http\Request;
 use App\DataTables\PbbDataTable;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class PbbController extends Controller
@@ -75,5 +77,10 @@ class PbbController extends Controller
 
         Alert::success('Berhasil', 'Data berhasil dihapus')->autoclose(3000)->toToast();
         return redirect()->route('pbb.index');
+    }
+
+    public function export_pbb()
+    {
+        return Excel::download(new PBBExport, 'Laporan pbb Pending.xlsx');
     }
 }

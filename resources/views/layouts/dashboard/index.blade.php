@@ -267,12 +267,12 @@
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">Balik Nama Sertifikat</a></td>
                       <td>{{ $balikNamaSertifikatStatusPending }}</td>
-                      <td><a href="#" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
+                      <td><a href="{{ route('export_balik_nama_sertifikat') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">PBB</a></td>
                       <td>{{ $pbbStatusPending }}</td>
-                      <td><a href="#" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
+                      <td><a href="{{ route('export_pbb') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">pengurasanm izin usaha</a></td>

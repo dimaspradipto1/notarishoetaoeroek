@@ -67,7 +67,8 @@ Route::middleware(['checkroles: ADMIN'])->group(function () {
     // Route::get('lacak-sertifikat/{id}', [LacakSertifikatController::class, 'show'])->name('lacak-sertifikat.show');
 
     Route::get('export-sertifikat', [SertifikatController::class, 'export_sertifikat'])->name('export_sertifikat');
-
+    Route::get('export-balik-nama-sertifikat', [BalikNamaSertifikatController::class, 'export_balik_nama_sertifikat'])->name('export_balik_nama_sertifikat');
+    Route::get('export_pbb', [PbbController::class, 'export_pbb'])->name('export_pbb');
 });
 
 

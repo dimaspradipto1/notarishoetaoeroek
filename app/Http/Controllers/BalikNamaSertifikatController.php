@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\BalikNamaSertifikat;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Exports\BalikNamaSertifikatExport;
 use App\DataTables\BalikNamaSertifikatDataTable;
 
 class BalikNamaSertifikatController extends Controller
@@ -77,5 +79,10 @@ class BalikNamaSertifikatController extends Controller
 
         Alert::success('Berhasil', 'Data berhasil dihapus')->autoclose(3000)->toToast();
         return redirect()->route('balik_nama_sertifikat.index');
+    }
+
+    public function export_balik_nama_sertifikat()
+    {
+        return Excel::download(new BalikNamaSertifikatExport, 'Laporan Balik Nama Sertifikat Pending.xlsx');
     }
 }
