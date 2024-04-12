@@ -6,6 +6,8 @@ use App\Models\Pbb;
 use App\Exports\PBBExport;
 use Illuminate\Http\Request;
 use App\DataTables\PbbDataTable;
+use App\Exports\PbbRejectedExport;
+use App\Exports\Rejected\PbbRejectedExport as RejectedPbbRejectedExport;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -82,5 +84,10 @@ class PbbController extends Controller
     public function export_pbb()
     {
         return Excel::download(new PBBExport, 'Laporan pbb Pending.xlsx');
+    }
+
+    public function export_pbb_rejected()
+    {
+        return Excel::download(new RejectedPbbRejectedExport, 'Laporan pbb Rejected.xlsx');
     }
 }

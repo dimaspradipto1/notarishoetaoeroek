@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Exports\IzinUsahaExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\DataTables\IzinUsahaDataTable;
+use App\Exports\Rejected\IzinUsahaRejectedExport;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class IzinUsahaController extends Controller
@@ -85,5 +86,10 @@ class IzinUsahaController extends Controller
     public function export_izin_usaha()
     {
         return Excel::download(new IzinUsahaExport, 'Laporan Izin Usaha Pending.xlsx');
+    }
+
+    public function export_izin_usaha_rejected()
+    {
+        return Excel::download(new IzinUsahaRejectedExport, 'Laporan Izin Usaha Rejected.xlsx');
     }
 }

@@ -306,32 +306,39 @@
                     <tr>
                       <th scope="col">Berkas</th>
                       <th scope="col">Jumlah</th>
-                      <th scope="col">Excel</th>
+                      <th scope="col">Export</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">Sertifikat</a></td>
                       <td>{{ $sertifikatStatusRejected }}</td>
+                      <td><a href="{{ route('export_sertifikat_rejected') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
   
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">Balik Nama Sertifikat</a></td>
                       <td>{{ $balikNamaSertifikatStatusRejected }}</td>
+                      <td><a href="{{ route('export_balik_nama_sertifikat_rejected') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
 
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">PBB</a></td>
                       <td>{{ $pbbStatusRejected }}</td>
+                      <td><a href="{{ route('export_pbb_rejected') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
 
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">pengurasan izin usaha</a></td>
                       <td>{{ $izinUsahaStatusRejected }}</td>
+                      <td><a href="{{ route('export_izin_usaha_rejected') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
+
                     </tr>
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">jual beli tanah dan bangunan</a></td>
                       <td>{{ $tanahStatusRejected }}</td>
+                      <td><a href="{{ route('export_tanah_rejected') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
+
                     </tr>
                   </tbody>
                 </table>

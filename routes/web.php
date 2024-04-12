@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\LacakSertifikat;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PbbController;
 use App\Http\Controllers\UserController;
@@ -71,6 +70,12 @@ Route::middleware(['checkroles: ADMIN'])->group(function () {
     Route::get('export_pbb', [PbbController::class, 'export_pbb'])->name('export_pbb');
     Route::get('export_izin_usaha', [IzinUsahaController::class, 'export_izin_usaha'])->name('export_izin_usaha');
     Route::get('export_tanah', [TanahController::class, 'export_tanah'])->name('export_tanah');
+
+    Route::get('export-sertifikat-rejected', [SertifikatController::class,    'export_sertifikat_rejected'])->name('export_sertifikat_rejected');
+    Route::get('export-balik-nama-sertifikat-rejected', [BalikNamaSertifikatController::class, 'export_balik_nama_sertifikat_rejected'])->name('export_balik_nama_sertifikat_rejected');
+    Route::get('export-pbb-rejected', [PbbController::class, 'export_pbb_rejected'])->name('export_pbb_rejected');
+    Route::get('export-izin-usaha-rejected', [IzinUsahaController::class, 'export_izin_usaha_rejected'])->name('export_izin_usaha_rejected');
+    Route::get('export-tanah-rejected', [TanahController::class, 'export_tanah_rejected'])->name('export_tanah_rejected');
 });
 
 

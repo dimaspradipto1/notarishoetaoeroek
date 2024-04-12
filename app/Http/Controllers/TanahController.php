@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\DataTables\TanahDataTable;
 use Maatwebsite\Excel\Facades\Excel;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Exports\Rejected\TanahRejectedExport;
 
 class TanahController extends Controller
 {
@@ -82,5 +83,10 @@ class TanahController extends Controller
     public function export_tanah()
     {
         return Excel::download(new TanahExport, 'Laporan Tanah Pending.xlsx');
+    }
+
+    public function export_tanah_rejected()
+    {
+        return Excel::download(new TanahRejectedExport, 'Laporan Tanah Rejected.xlsx');
     }
 }

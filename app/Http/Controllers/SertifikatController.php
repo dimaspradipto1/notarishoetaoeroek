@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Exports\SertifikatExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\DataTables\SertifikatDataTable;
+use App\Exports\rejected\SertifikaRejectedtExport;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class SertifikatController extends Controller
@@ -85,5 +86,10 @@ class SertifikatController extends Controller
     public function export_sertifikat()
     {
         return Excel::download(new SertifikatExport, 'Laporan Sertifikat Pending.xlsx');
+    }
+
+    public function export_sertifikat_rejected()
+    {
+        return Excel::download(new SertifikaRejectedtExport, 'Laporan Sertifikat Rejected.xlsx');
     }
 }
