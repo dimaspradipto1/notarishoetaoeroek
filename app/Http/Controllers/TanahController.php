@@ -6,6 +6,7 @@ use App\Models\Tanah;
 use App\Exports\TanahExport;
 use Illuminate\Http\Request;
 use App\DataTables\TanahDataTable;
+use App\Exports\Approved\TanahApprovedExport;
 use Maatwebsite\Excel\Facades\Excel;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Exports\Rejected\TanahRejectedExport;
@@ -88,5 +89,10 @@ class TanahController extends Controller
     public function export_tanah_rejected()
     {
         return Excel::download(new TanahRejectedExport, 'Laporan Tanah Rejected.xlsx');
+    }
+
+    public function export_tanah_approved()
+    {
+        return Excel::download(new TanahApprovedExport, 'Laporan Tanah Approved.xlsx');
     }
 }

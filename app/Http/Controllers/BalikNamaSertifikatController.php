@@ -9,6 +9,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Exports\BalikNamaSertifikatExport;
 use App\DataTables\BalikNamaSertifikatDataTable;
+use App\Exports\Approved\BalikNamaSertifikatApprovedExport;
 use App\Exports\Rejected\BalikNamaSertifikatRejectedExport;
 
 class BalikNamaSertifikatController extends Controller
@@ -90,5 +91,10 @@ class BalikNamaSertifikatController extends Controller
     public function export_balik_nama_sertifikat_rejected()
     {
         return Excel::download(new BalikNamaSertifikatRejectedExport, 'Laporan Balik Nama Sertifikat Rejected.xlsx');
+    }
+
+    public function export_balik_nama_sertifikat_approved()
+    {
+        return Excel::download(new BalikNamaSertifikatApprovedExport, 'Laporan Balik Nama Sertifikat Approved.xlsx');
     }
 }

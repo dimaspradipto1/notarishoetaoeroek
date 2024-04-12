@@ -369,25 +369,31 @@
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">Sertifikat</a></td>
                       <td>{{ $sertifikatStatusSuccess }}</td>
+                      <td><a href="{{ route('export_sertifikat_approved') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
   
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">Balik Nama Sertifikat</a></td>
                       <td>{{ $balikNamaSertifikatStatusSuccess }}</td>
+                      <td><a href="{{ route('export_balik_nama_sertifikat_approved') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
+
                     </tr>
 
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">PBB</a></td>
                       <td>{{ $pbbStatusSuccess }}</td>
+                      <td><a href="{{ route('export_pbb_approved') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
 
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">pengurasan izin usaha</a></td>
                       <td>{{ $izinUsahaStatusSuccess }}</td>
+                      <td><a href="{{ route('export_izin_usaha_approved') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
                     <tr>
                       <td><a href="#" class="text-primary fw-bold">jual beli tanah dan bangunan</a></td>
                       <td>{{ $tanahStatusSuccess }}</td>
+                      <td><a href="{{ route('export_tanah_approved') }}" class="text-primary fw-bold text-decoration-none text-success"><i class="fa-sharp fa-solid fa-file-excel"></i> Excel</td>
                     </tr>
                   </tbody>
                 </table>

@@ -76,6 +76,12 @@ Route::middleware(['checkroles: ADMIN'])->group(function () {
     Route::get('export-pbb-rejected', [PbbController::class, 'export_pbb_rejected'])->name('export_pbb_rejected');
     Route::get('export-izin-usaha-rejected', [IzinUsahaController::class, 'export_izin_usaha_rejected'])->name('export_izin_usaha_rejected');
     Route::get('export-tanah-rejected', [TanahController::class, 'export_tanah_rejected'])->name('export_tanah_rejected');
+
+    Route::get('export-sertifikat-approved', [SertifikatController::class, 'export_sertifikat_approved'])->name('export_sertifikat_approved');
+    Route::get('export-balik-nama-sertifikat-approved', [BalikNamaSertifikatController::class, 'export_balik_nama_sertifikat_approved'])->name('export_balik_nama_sertifikat_approved');
+    Route::get('export-pbb-approved', [PbbController::class, 'export_pbb_approved'])->name('export_pbb_approved');
+    Route::get('export-izin-usaha-approved', [IzinUsahaController::class, 'export_izin_usaha_approved'])->name('export_izin_usaha_approved');
+    Route::get('export-tanah-approved', [TanahController::class, 'export_tanah_approved'])->name('export_tanah_approved');
 });
 
 
